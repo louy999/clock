@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #152238;
+}
+span {
+  color: white;
+}
+$colorAk: #c8c6c4;
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .num-hour {
+    & > span {
+      position: relative;
+      font-size: 30px;
+      &:nth-child(1) {
+        bottom: 200px;
+        left: 630px;
+      }
+      &:nth-child(2) {
+        left: 695px;
+        bottom: 115px;
+      }
+
+      &:nth-child(3) {
+        left: 705px;
+      }
+      &:nth-child(4) {
+        left: 655px;
+        top: 115px;
+      }
+      &:nth-child(5) {
+        left: 550px;
+        top: 200px;
+      }
+      &:nth-child(6) {
+        top: 225px;
+        left: 415px;
+      }
+      &:nth-child(7) {
+        left: 280px;
+        top: 205px;
+      }
+      &:nth-child(8) {
+        left: 178px;
+        top: 115px;
+      }
+      &:nth-child(9) {
+        left: 120px;
+      }
+      &:nth-child(10) {
+        bottom: 115px;
+        left: 130px;
+      }
+      &:nth-child(11) {
+        bottom: 200px;
+        left: 180px;
+      }
+      &:nth-child(12) {
+        bottom: 230px;
+        left: 265px;
+      }
+    }
+  }
+
+  .oclock {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: #23395d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .center {
+      width: 30px;
+      height: 30px;
+      z-index: 1;
+      border-radius: 10px;
+      background-color: #152238;
+      position: absolute;
+    }
+    .hour {
+      width: 10px;
+      height: 450px;
+      height: 200px;
+      position: relative;
+      background-color: $colorAk;
+      border-radius: 10px;
+      transform: rotate(0deg);
+      position: absolute;
+
+      &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 20px solid $colorAk;
+        right: -15px;
+        bottom: 190px;
+        position: absolute;
+      }
+    }
+    .min {
+      width: 7px;
+      height: 450px;
+      height: 300px;
+      position: relative;
+      background-color: $colorAk;
+      border-radius: 10px;
+      transform: rotate(00deg);
+      position: absolute;
+
+      &::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 20px solid $colorAk;
+        right: -15px;
+        bottom: 295px;
+        position: absolute;
+      }
+    }
+    .sec {
+      width: 5px;
+      height: 450px;
+      height: 300px;
+      position: relative;
+      background-color: $colorAk;
+      border-radius: 10px;
+      transform: rotate(0deg);
+      position: absolute;
+      &::before {
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 20px solid $colorAk;
+        right: -15px;
+        bottom: 295px;
+        position: absolute;
+      }
+    }
+  }
+}
